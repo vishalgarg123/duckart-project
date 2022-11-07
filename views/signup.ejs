@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+body {
+	font-family: "Poppins", sans-serif;
+}
+main {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(0deg, hsla(0, 0%, 0%, 0.3), hsla(0, 0%, 0%, 0.3)),
+		url("https://images.unsplash.com/photo-1494861895304-fb272971c078?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: grid;
+	place-items: center;
+}
+.wrapper {
+	width: 20rem;
+	height: 27rem;
+	background: hsl(0 0 100% / 0.1);
+	backdrop-filter: blur(0.7rem);
+	border-radius: 12px;
+	/* 	border: 0.01rem solid #fff; */
+	box-shadow: 0 1rem 4rem;
+	padding: 1rem;
+}
+.form-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+.form-group > input {
+	margin-bottom: 1.2rem;
+}
+label {
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 0.001rem;
+	margin-bottom: 0.2rem;
+	border-radius: 12px;
+}
+.btn {
+	text-align: center;
+	padding: 0.2rem 0;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 300ms ease-in-out;
+}
+input {
+	background: hsl(0 20% 100%);
+	font-size: 1rem;
+	border-radius: 12px;
+}
+input:focus {
+	border: none;
+	outline: none;
+}
+
+.btn-primary {
+	background: #2d7a2c;
+	padding: 0.5rem;
+	color: #fff;
+	/* 	outline: none; */
+	border-radius: 56px;
+	
+	margin-bottom: 0.5rem;
+}
+.btn-secondary {
+	background: #2d7a2c;
+	padding: 0.5rem;
+	color: #fff;
+	/* 	outline: none; */
+	border-radius: 56px;
+	margin-bottom: 0.5rem;
+}
+.btn-primary:hover {
+	background: #ff8fb1;
+	color: #000;
+}
+.btn-secondary:hover {
+	background: #ff8fb1;
+	color: #000;
+}
+.btn-forget {
+	color: #fff;
+	padding: 0.5rem;
+}
+.btn-forget:hover {
+	background: #fff;
+	color: #000;
+}
+.as{
+    text-decoration: none;
+    color: white;
+}
+.mn{
+	font: optional;
+	color: red;
+}
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <form action="/dasboard/signc" method="post" class="form-group">
+                <label for="uname">username</label>
+                <input type="text" name="usname" maxlength=20 required>
+                <label for="email">Email</label>
+                <input type="text" name="email" required>
+                <label for="password">password</label>
+                <input type="password" name="pswd" maxlength=16 required>
+                <label for="cnfpasswd">confirm password</label>
+                <input type="password" name="cpswd" maxlength=16 required>
+              <button class="btn btn-primary sign-up">sign up</button>
+              <button class="btn btn-secondary log-in" >
+                <a class="as" href="/dasboard/login">Log in</a></button> 
+                <a href="#" class="btn btn-forget">forget password</a>
+				<h4 class="mn"><%=msg %></h4>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
